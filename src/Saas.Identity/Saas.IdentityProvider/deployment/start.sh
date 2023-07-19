@@ -161,7 +161,7 @@ echo "Provisioning resource group ${resource_group}..." |
 
 put-value ".deployment.resourceGroup.provisionState" "provisioning"
 (
-    create-resource-group "${resource_group}" "${location}"
+    # create-resource-group "${resource_group}" "${location}"
     put-value ".deployment.resourceGroup.provisionState" "successful"
 ) ||
     (

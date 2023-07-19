@@ -146,12 +146,16 @@ function initialize-configuration-manifest-file() {
 
 # check if prerequisites for running the deployment script are met
 check-prerequisites
+echo "preqs complete"
 
 # initialize shell scripts ensuring that permissions are set correctly
 initialize-shell-scripts
+echo "shell complete"
 
 # initialize configuration manifest file
 initialize-configuration-manifest-file
+echo "configuration complete"
 
 # set to install az cli extensions without prompting
 az config set extension.use_dynamic_install=yes_without_prompt &>/dev/null
+echo "az complete"

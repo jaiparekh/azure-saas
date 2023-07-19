@@ -36,7 +36,8 @@ function final-state() {
                 --level success \
                 --header "Deployment script completion"
 
-        resource_group="$(get-value ".deployment.resourceGroup.name")"
+# resource_group="$(get-value ".deployment.resourceGroup.name")"
+resource_group="ZingSaaSv2"
         subscription_id="$(get-value ".initConfig.subscriptionId")"
 
         echo "To see the deployed resources, please visit the Azure Portal and navigate to the resource group '${resource_group}': https://ms.portal.azure.com/#@microsoft.onmicrosoft.com/resource/subscriptions/${subscription_id}/resourceGroups/${resource_group}/overview" |
@@ -216,7 +217,7 @@ function populate-configuration-manifest() {
     put-value ".oidc.credentials.name" "oidc-credential-${long_solution_name}"
 
     # defining resource group name setting
-    put-value ".deployment.resourceGroup.name" "rg-${long_solution_name}"
+    #put-value ".deployment.resourceGroup.name" "rg-${long_solution_name}"
 
     # defining Azure B2C display name
     b2c_display_name="b2c-${long_solution_name}"
