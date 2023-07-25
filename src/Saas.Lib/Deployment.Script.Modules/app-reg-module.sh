@@ -211,10 +211,10 @@ function add-required-resource-access() {
 
     if [[ "${grant_admin_consent}" == true ]]; then
 
-        echo "Waiting 60 seconds to allow the permissions to propagate before granting admin consent." |
+        echo "Waiting 120 seconds to allow the permissions to propagate before granting admin consent." |
             log-output --level info
 
-        sleep 60
+        sleep 120
 
         echo "Granting admin consent" | log-output --level info
         az ad app permission admin-consent \
